@@ -11,20 +11,32 @@ const Register = () => {
     e.preventDefault();
     try {
       await axios.post('http://localhost:3001/auth/register', { email, password });
-      alert('נרשמת בהצלחה!');
+      alert('Registration successful!');
       navigate('/login');
     } catch (err) {
-      alert('רישום נכשל');
+      alert('Registration failed');
       console.error(err);
     }
   };
 
   return (
     <form onSubmit={handleRegister}>
-      <h2>הרשמה</h2>
-      <input type="email" placeholder="אימייל" value={email} onChange={(e) => setEmail(e.target.value)} required />
-      <input type="password" placeholder="סיסמה" value={password} onChange={(e) => setPassword(e.target.value)} required />
-      <button type="submit">הרשמה</button>
+      <h2>Register</h2>
+      <input 
+        type="email" 
+        placeholder="Email" 
+        value={email} 
+        onChange={(e) => setEmail(e.target.value)} 
+        required 
+      />
+      <input 
+        type="password" 
+        placeholder="Password" 
+        value={password} 
+        onChange={(e) => setPassword(e.target.value)} 
+        required 
+      />
+      <button type="submit">Register</button>
     </form>
   );
 };

@@ -122,3 +122,24 @@
     background-color: #4CAF50;
   }
   
+  /* Navbar.css */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.navbar-title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+}
