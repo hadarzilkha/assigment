@@ -15,6 +15,7 @@ const SendForm = () => {
       });
       alert('Phishing attempt sent successfully!');
       setEmail('');
+      window.location.reload();
     } catch (err) {
       alert('Sending failed');
       console.error(err);
